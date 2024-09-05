@@ -19,7 +19,8 @@ const AccountCard = async () => {
       <span>Username: </span>
       <ul>
         {chars.map((c, i) => (
-          <li>
+          <li key={c.name}>
+            
             {c.name} : {c.level}
           </li>
         ))}

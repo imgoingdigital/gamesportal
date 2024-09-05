@@ -12,7 +12,7 @@ import { Label } from '@/components/ui/label'
 import Link from 'next/link'
 
 
-const index = () => {
+const LoginForm = () => {
   const {status} = useSession();
   const router = useRouter();
 
@@ -94,4 +94,4 @@ const index = () => {
   )
 }
 
-export default index
+export default LoginForm

@@ -15,9 +15,7 @@ import { signUp } from '@/app/(muonline)/_Actions/accounts'
 import { string } from 'zod'
 // import { signUp } from '@/app/actions/users/signup'
 
-const index = () => {
-  const router = useRouter();
-  const {status} = useSession();
+const RegisterForm = () => {
   const [userName, setUserName] = useState('')
   const [password, setPassword] = useState('')
   const [email, setEmail] = useState('')
@@ -74,4 +72,4 @@ const index = () => {
   )
 }
 
-export default index
+export default RegisterForm
