@@ -1,0 +1,67 @@
+
+html {
+  cursor: url("../components/cursors/normal cursor.cur"), auto;
+}
+
+html a, html button {
+  cursor: url("../components/cursors/link select.cur"), auto;
+}
+body {
+  width: 100%;
+  background: url(../public/img/top-bg-fon-page.jpg) top center no-repeat, url(/public/img/footer-bg.jpg) bottom center no-repeat;
+  background-color: #fbfcff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  color: #575859;
+  font-weight: 400;
+  
+}
+/* GLOBAL TOP BAR */
+.global-top-bar {
+	width: 100%;
+	background: #101010;
+	color: #777777;
+	padding: 7px 0px 2px 0px;
+	text-transform: uppercase;
+	font-size: 12px;
+}
+	.global-top-bar .global-top-bar-content {
+		width: 100%;
+		margin: 0px auto;
+	}
+		.global-top-bar .global-top-bar-content .row {
+			margin: 0px;
+			padding: 0px;
+		}
+	.global-top-bar a.logout {
+		color: #ff0000 !important;
+	}
+	.global-top-bar a {
+		color: #999999 !important;
+	}
+	.global-top-bar a:hover {
+		color: #ffffff !important;
+	}
+.global-top-bar-nopadding {
+	padding: 0px !important;
+}
+.global-top-bar-separator {
+	padding: 0px 5px;
+}
+.navbar {
+  overflow:visible;
+  background-color: #333;
+  font-family: Arial;
+  opacity: 50%;
+  font-weight: 600;
+}
+
+.navbar  a, .navbar button{
+  background-color: #101010;
+  color: aqua;
+}
+
+.navbar .dropdown-content {
+  font-size: medium;
+}
+

@@ -1,0 +1,102 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["prismaSchemaFolder"]
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model account_data {
+  account_id              Int     @id @db.UnsignedInt
+  vip_status              Int?
+  vip_duration            BigInt?
+  expanded_warehouse      Int?    @db.UnsignedTinyInt
+  expanded_warehouse_time BigInt?
+  special_character       Int?    @db.UnsignedSmallInt
+  credits                 Int?    @db.UnsignedInt
+  web_credits             Int?    @db.UnsignedInt
+  current_character       Int?    @db.UnsignedInt
+  current_type            Int?    @db.UnsignedTinyInt
+  current_ip              String? @db.VarChar(16)
+  current_mac             String? @db.VarChar(50)
+  current_diskserial      Int?    @db.UnsignedInt
+  current_server          Int?    @db.UnsignedSmallInt
+  cash_shop_discount_wc   Int?    @db.UnsignedTinyInt
+  cash_shop_discount_gp   Int?    @db.UnsignedTinyInt
+  cash_shop_discount_date BigInt?
+}
+
+model accounts {
+  guid              Int       @id @default(autoincrement()) @db.UnsignedInt
+  blocked           Int?      @default(0) @db.UnsignedTinyInt
+  security_code     String?   @default("0") @db.VarChar(255)
+  golden_channel    BigInt?   @default(1500434821)
+  facebook_status   Int?      @default(0) @db.UnsignedTinyInt
+  secured           Int?      @default(1) @db.UnsignedTinyInt
+  account           String?   @db.VarChar(255)
+  password          String?   @db.VarChar(255)
+  email             String?   @db.VarChar(255)
+  register          BigInt?
+  updated_at        DateTime? @db.DateTime(0)
+  created_at        DateTime? @db.DateTime(0)
+  email_verified_at DateTime? @db.DateTime(0)
+}
+
+model character_info {
+  guid                  Int     @id @default(autoincrement()) @db.UnsignedInt
+  account_id            Int?    @db.UnsignedInt
+  authority             Int?    @default(0) @db.UnsignedTinyInt
+  race                  Int?    @db.UnsignedSmallInt
+  name                  String? @db.VarChar(255)
+  slot                  Int?    @default(1) @db.TinyInt
+  level                 Int?    @default(0) @db.SmallInt
+  level_master          Int?    @default(0) @db.SmallInt
+  level_majestic        Int?    @default(0) @db.SmallInt
+  experience            BigInt? @default(0)
+  experience_master     BigInt? @default(0)
+  experience_majestic   BigInt? @default(0)
+  points                Int?    @default(0)
+  points_master         Int?    @default(0)
+  points_majestic       Int?    @default(0)
+  strength              Int?    @default(0) @db.UnsignedInt
+  agility               Int?    @default(0) @db.UnsignedInt
+  vitality              Int?    @default(0) @db.UnsignedInt
+  energy                Int?    @default(0) @db.UnsignedInt
+  leadership            Int?    @default(0) @db.UnsignedInt
+  world                 Int?    @default(0) @db.UnsignedSmallInt
+  world_x               Int?    @default(0) @db.SmallInt
+  world_y               Int?    @default(0) @db.SmallInt
+  direction             Int?    @default(0) @db.UnsignedTinyInt
+  money                 Int?    @default(0) @db.UnsignedInt
+  life                  Int?    @default(0)
+  mana                  Int?    @default(0)
+  shield                Int?    @default(0)
+  stamina               Int?    @default(0)
+  add_fruit_points      Int?    @default(0)
+  dec_fruit_points      Int?    @default(0)
+  expanded_inventory    Int?    @default(0) @db.UnsignedTinyInt
+  mute_time             BigInt? @default(0)
+  admin_flags           Int?    @default(0) @db.UnsignedInt
+  pk_level              Int?    @default(3) @db.UnsignedTinyInt
+  pk_count              Int?    @default(0)
+  pk_points             Int?    @default(0)
+  first_time            Int?    @default(1) @db.UnsignedTinyInt
+  santa_claus_gift      BigInt? @default(0)
+  personal_store_name   String? @default("0") @db.VarChar(255)
+  personal_store_open   Int?    @default(0) @db.TinyInt
+  goblin_points         Int?    @default(0) @db.UnsignedInt
+  last_use              BigInt? @default(0)
+  kick_time             BigInt? @default(0)
+  post_count            Int?    @default(0)
+  post_day              Int?    @default(0) @db.UnsignedTinyInt
+  post_month            Int?    @default(0) @db.UnsignedTinyInt
+  ruud_money            Int?    @default(0) @db.UnsignedInt
+  hunting_log_visible   Int?    @default(0) @db.UnsignedTinyInt
+  create_date           BigInt? @default(0)
+  online                Int?    @default(0) @db.TinyInt
+  server_code           Int?    @default(3) @db.UnsignedSmallInt
+  reset                 Int?    @default(0) @db.UnsignedInt
+  monster_soul_purchase Int?    @default(0)
+}

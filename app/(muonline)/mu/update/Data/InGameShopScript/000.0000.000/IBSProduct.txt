@@ -1,0 +1,10 @@
+1@Kris@Quantity@255@EA@1@0@142@145@1@144@673@518@0@7@138@680
+2@Jewel of Soul@Quantity@1@EA@1@1@142@145@1@144@673@518@7182@7@138@680
+2@Jewel of Soul@Quantity@1@EA@1@2@142@145@1@144@673@518@7182@7@138@680
+2@Jewel of Soul@Quantity@1@EA@1@3@142@145@1@144@673@518@7182@7@138@680
+3@Blessed Archangel's Absolute Blade@Duration@3600@Sec.@1@0@142@145@1@144@673@518@114@10@140@386
+4@Manticore Lance@Quantity@100@EA@1@0@142@145@1@144@673@518@1567@7@138@680
+7@Jewel of Bless@Quantity@30@EA@30@0@142@145@1@144@673@518@7181@7@138@680
+8@Jewel of Soul@Quantity@30@EA@15@0@142@145@1@144@673@518@7182@7@138@680
+9@Chaos Dragon Axe@Quantity@80@EA@1@0@142@145@1@144@673@518@1030@7@138@680
+10@Jewel of Life@Quantity@30@EA@30@0@142@145@1@144@673@518@7184@7@138@680
