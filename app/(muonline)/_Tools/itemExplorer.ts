@@ -1,4 +1,4 @@
-import LoginForm from "../_Components/LoginForm";
+import LoginForm from "../_Components/LoginForm/LoginForm";
 
 const xml2js = require('xml2js');
 const fs = require('fs')

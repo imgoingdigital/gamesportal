@@ -7,7 +7,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 // import { useSession } from 'next-auth/react'
 import React, { useEffect, useReducer, useState } from 'react'
-import RegisterForm from '../../_Components/RegisterForm'
+import RegisterForm from '../../_Components/RegisterForm/RegisterForm'
 
 const page = () => {
 
