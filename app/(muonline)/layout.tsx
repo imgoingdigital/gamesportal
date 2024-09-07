@@ -26,9 +26,8 @@ export default function MuLayout({
 }) {
   return (
       <html>
-        <Head>
-          <Adsense pId="ca-pub-6919811732951558"></Adsense>
-        </Head>
+        <Adsense pId="ca-pub-6919811732951558"></Adsense>
+        <meta name="google-adsense-account" content="ca-pub-6919811732951558"></meta>
         <body>
           <Provider>
             <TopBar></TopBar>

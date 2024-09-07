@@ -9,6 +9,7 @@ import TopBar from "../(muonline)/_Components/TopBar/TopBar";
 import Head from "next/head";
 
 import Adsense from "@/components/seo/Adsense";
+import Adbanner from "@/components/seo/Adbanner";
 const inter = Inter({ subsets: ["latin"] });
 
 
@@ -28,16 +29,16 @@ export default function McLayout({
 }) {
   return (
     <html>
-        <Head>
-          <Adsense pId="ca-pub-6919811732951558"></Adsense>
-        </Head>
+<Adsense pId="ca-pub-6919811732951558"></Adsense>
     <body>
       <Provider>
         <TopBar></TopBar>
         <NavMu></NavMu>
         {children}
       </Provider>
+      
     </body>
+    
   </html>
     
   )
