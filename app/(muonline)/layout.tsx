@@ -8,6 +8,8 @@ import "@/styles/mu.css"
 
 import TopBar from "./_Components/TopBar/TopBar";
 import { Provider } from "./_Providers";
+import GoogleAdsense from "@/components/seo/GoogleAdsense";
+import Head from "next/head";
 export const metadata: Metadata = {
   title: "MuOnline Callejon",
   description: "Lets Play Together",
@@ -24,6 +26,9 @@ export default function MuLayout({
 }) {
   return (
       <html>
+        <Head>
+          <GoogleAdsense></GoogleAdsense>
+        </Head>
         <body>
           <Provider>
             <TopBar></TopBar>

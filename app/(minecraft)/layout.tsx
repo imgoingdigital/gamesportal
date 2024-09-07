@@ -6,6 +6,8 @@ import { favicon_mc } from "@/components/favicons";
 import NavMu from "../(muonline)/_Components/NavBar";
 import { Provider } from "../(muonline)/_Providers";
 import TopBar from "../(muonline)/_Components/TopBar/TopBar";
+import Head from "next/head";
+import GoogleAdsense from "@/components/seo/GoogleAdsense";
 const inter = Inter({ subsets: ["latin"] });
 
 
@@ -25,6 +27,9 @@ export default function McLayout({
 }) {
   return (
     <html>
+      <Head>
+        <GoogleAdsense></GoogleAdsense>
+      </Head>
     <body>
       <Provider>
         <TopBar></TopBar>
