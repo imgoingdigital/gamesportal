@@ -7,7 +7,8 @@ import NavMu from "../(muonline)/_Components/NavBar";
 import { Provider } from "../(muonline)/_Providers";
 import TopBar from "../(muonline)/_Components/TopBar/TopBar";
 import Head from "next/head";
-import GoogleAdsense from "@/components/seo/GoogleAdsense";
+
+import Adsense from "@/components/seo/Adsense";
 const inter = Inter({ subsets: ["latin"] });
 
 
@@ -27,9 +28,9 @@ export default function McLayout({
 }) {
   return (
     <html>
-      <Head>
-        <GoogleAdsense></GoogleAdsense>
-      </Head>
+        <Head>
+          <Adsense pId="ca-pub-6919811732951558"></Adsense>
+        </Head>
     <body>
       <Provider>
         <TopBar></TopBar>

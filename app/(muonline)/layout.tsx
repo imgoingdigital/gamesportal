@@ -8,7 +8,7 @@ import "@/styles/mu.css"
 
 import TopBar from "./_Components/TopBar/TopBar";
 import { Provider } from "./_Providers";
-import GoogleAdsense from "@/components/seo/GoogleAdsense";
+import Adsense from "@/components/seo/Adsense";
 import Head from "next/head";
 export const metadata: Metadata = {
   title: "MuOnline Callejon",
@@ -27,7 +27,7 @@ export default function MuLayout({
   return (
       <html>
         <Head>
-          <GoogleAdsense></GoogleAdsense>
+          <Adsense pId="ca-pub-6919811732951558"></Adsense>
         </Head>
         <body>
           <Provider>

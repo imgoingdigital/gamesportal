@@ -3,6 +3,8 @@ import NavMu from "../(muonline)/_Components/NavBar"
 import "@/styles/mu.css"
 import "../globals.css"
 import { favicon_main } from "@/components/favicons";
+import Head from "next/head";
+import Adsense from "@/components/seo/Adsense";
 
 export const metadata: Metadata = {
   title: "Callejon Games",
@@ -20,6 +22,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+              <Head>
+          <Adsense pId="ca-pub-6919811732951558"></Adsense>
+        </Head>
       <body>
         <NavMu></NavMu>
         {children}
