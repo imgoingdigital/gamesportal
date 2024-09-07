@@ -71,6 +71,7 @@ export const authenticator: NextAuthOptions = {
           }
           return userData;
         } catch (error) {
+          console.log (error)
           throw new Error("authenticator error")          
         } 
       }

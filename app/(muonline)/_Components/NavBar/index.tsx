@@ -37,7 +37,7 @@ const NavMu = () => {
                 ):(
                   //No Submenu
                   <>
-                  <Link href={nav.ref} legacyBehavior passHref>
+                  <Link href={nav.ref} legacyBehavior passHref key={nav.id}>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     {nav.title}
                   </NavigationMenuLink>

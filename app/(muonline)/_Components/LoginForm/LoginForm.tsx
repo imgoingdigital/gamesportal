@@ -38,7 +38,7 @@ const LoginForm = () => {
         redirect: false,
       })
 
-      console.log(signInResponse.ok)
+      console.log(signInResponse)
 
 
       if(!signInResponse.ok){
