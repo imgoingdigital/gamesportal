@@ -10,6 +10,7 @@ import Head from "next/head";
 
 import Adsense from "@/components/seo/Adsense";
 import Adbanner from "@/components/seo/Adbanner";
+import FooterComponent from "../(main)/_components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 
@@ -35,6 +36,7 @@ export default function McLayout({
         <TopBar></TopBar>
         <NavMu></NavMu>
         {children}
+        <FooterComponent></FooterComponent>
       </Provider>
       
     </body>

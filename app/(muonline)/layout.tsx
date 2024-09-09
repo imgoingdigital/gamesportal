@@ -10,6 +10,7 @@ import TopBar from "./_Components/TopBar/TopBar";
 import { Provider } from "./_Providers";
 import Adsense from "@/components/seo/Adsense";
 import Head from "next/head";
+import FooterComponent from "../(main)/_components/Footer";
 export const metadata: Metadata = {
   title: "MuOnline Callejon",
   description: "Lets Play Together",
@@ -33,6 +34,7 @@ export default function MuLayout({
             <TopBar></TopBar>
             <NavMu></NavMu>
             {children}
+            <FooterComponent></FooterComponent>
           </Provider>
         </body>
       </html>

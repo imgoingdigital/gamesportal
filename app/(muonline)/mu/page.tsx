@@ -4,7 +4,7 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div>Mu Homepage</div>
+    <div className='main'>Mu Homepage</div>
   )  
 }
 

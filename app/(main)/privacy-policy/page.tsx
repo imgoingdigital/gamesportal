@@ -2,7 +2,7 @@ import React from 'react'
 
 const page = () => {
   return (
-<div className="bg-gray-100">
+<div className="bg-gray-100 main">
     <div className="container mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold mb-4">Privacy Policy</h1>
 
@@ -125,6 +125,7 @@ const page = () => {
             This privacy policy is subject to change without notice.
         </p>
     </div>
+    <div className="push"></div>
 </div>
   )
 }

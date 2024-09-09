@@ -1,11 +1,13 @@
 import { Metadata } from "next";
 import NavMu from "../(muonline)/_Components/NavBar"
-import "@/styles/mu.css"
+import "@/styles/main.css"
 import "../globals.css"
 import { favicon_main } from "@/components/favicons";
 import Head from "next/head";
 import Adsense from "@/components/seo/Adsense";
 import Adbanner from "@/components/seo/Adbanner";
+import FooterComponent from "./_components/Footer";
+
 
 export const metadata: Metadata = {
   title: "Callejon Games",
@@ -26,11 +28,14 @@ export default function RootLayout({
 
       <Adsense pId="ca-pub-6919811732951558"></Adsense>
 
-      <body>
+      <body >
         <NavMu></NavMu>
         {children}
         {/* <Adbanner dataAdFormat="auto" dataFullWidthResponsive={true} dataAdSlot="9956317112"></Adbanner> */}
+        
+        <FooterComponent></FooterComponent>
       </body>
+      
     </html>
   )
 }

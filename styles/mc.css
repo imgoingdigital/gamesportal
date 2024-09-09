@@ -1,6 +1,5 @@
 
 html, body {
-  min-height: 100%;
   
   /* cursor: url("../components/cursors/Diamond Sword - Normal Select.cur"), auto; */
   cursor: url("http://www.rw-designer.com/cursor-extern.php?id=30264"), auto;
@@ -16,16 +15,7 @@ body {
   color: #575859;
   font-weight: 400;
 }
-main {
-  min-width: 100%;
-  color: aqua;
-}
-body > .main {
-  min-width: 100%;
-  min-height: 100%;
-  margin: 5px;
-  background-color: antiquewhite;
-}
+
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
   display: block;
 }
