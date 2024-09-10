@@ -13,6 +13,7 @@ declare module "next-auth" {
     } 
   }
   interface User {
+    isAdmin: boolean;
     id: string;
     guid: number;
     token?: string;
@@ -25,6 +26,7 @@ declare module "next-auth" {
 declare module "next-auth/jwt" {
   interface JWT {
     user: {
+      isAdmin: boolean;
       id: string ;
       guid: number;
       token?: string;

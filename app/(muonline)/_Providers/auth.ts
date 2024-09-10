@@ -4,7 +4,7 @@ import NextAuth, { Account, NextAuthOptions, Profile, Session, User } from "next
 import CredentialsProvider from 'next-auth/providers/credentials'
 import GoogleProvider from "next-auth/providers/google";
 // import {PrismaAdapter} from '@auth/prisma-adapter'
-
+ 
 import MuDb from "@/prismaClient";
 import Email from "next-auth/providers/email";
 import { encode, JWT } from "next-auth/jwt"; 
@@ -63,6 +63,7 @@ export const authenticator: NextAuthOptions = {
 
 
           const userData = {
+            isAdmin: false,
             id: gameAccount.account,
             guid: gameAccount.guid ,
             email: gameAccount.email,
