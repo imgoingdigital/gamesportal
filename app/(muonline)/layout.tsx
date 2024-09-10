@@ -11,6 +11,7 @@ import { Provider } from "./_Providers";
 import Adsense from "@/components/seo/Adsense";
 import Head from "next/head";
 import FooterComponent from "../(main)/_components/Footer";
+import NavAll from "./_Components/NavBar/MuNavBar";
 export const metadata: Metadata = {
   title: "MuOnline Callejon",
   description: "Lets Play Together",

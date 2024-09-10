@@ -2,7 +2,7 @@ import { version } from "os";
 
 const servers = [
   {
-    name: "Live Server",
+    name: "Forge SMP",
     address: "mc.callejon.online",
     version: "1.19.4",
     mods: [
@@ -11,14 +11,28 @@ const servers = [
         link: "sourceforge"
       }
     ],
-    isHidden: true
+    isHidden: true,
+    links:[
+      {
+        name: "Modpack: Libs",
+        ref: "/downloads/mc/Libs.zip"
+      },
+      {
+        name: "Modpack: Mobs",
+        ref: "/downloads/mc/Mobs.zip"
+      },
+      {
+        name: "Modpack: World",
+        ref: "/downloads/mc/World.zip"
+      }
+    ]
 
   },
   {
-    name: "Test Server",
+    name: "Forge Test",
     address: "mc2.callejon.online",
     version: "1.21.1",
-    description: "Vanilla Server",
+    description: "Vanilla-ish Server",
     mods: [
       {
         name: "minecraft",

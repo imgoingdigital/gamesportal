@@ -32,7 +32,6 @@ export default function RootLayout({
         <NavMu></NavMu>
         {children}
         {/* <Adbanner dataAdFormat="auto" dataFullWidthResponsive={true} dataAdSlot="9956317112"></Adbanner> */}
-        
         <FooterComponent></FooterComponent>
       </body>
       

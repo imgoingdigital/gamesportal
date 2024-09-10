@@ -10,11 +10,10 @@ import React, { useEffect, useReducer, useState } from 'react'
 import RegisterForm from '../../_Components/RegisterForm/RegisterForm'
 
 const page = () => {
-
-
-
   return (
-    <RegisterForm></RegisterForm>
+    <div className='main'>
+      <RegisterForm></RegisterForm>
+    </div>
 )}
 
 export default page

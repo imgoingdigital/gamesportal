@@ -16,7 +16,7 @@ const navLinksMu = [
   {
     id: "info",
     title: "Info",
-    ref: "/info"
+    refx: "/info"
   },
   {
     id: "games",
@@ -32,7 +32,7 @@ const navLinksMu = [
 
       },
       {
-        id: "minecraft",
+        id: "mc",
         title: "Minecraft",
         ref: "/mc",
         description:"A Block Building Game"

@@ -16,6 +16,9 @@ body {
   font-weight: 400;
 }
 
+body a, nav button{
+    cursor: url("../components/cursors/mc_diamond_pick_fixed.cur"), auto;
+}
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
   display: block;
 }

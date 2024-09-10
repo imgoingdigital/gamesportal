@@ -14,7 +14,7 @@ const NavMu = () => {
         <NavigationMenuList>
           {navLinksMu.map((nav, index) => (
             !nav.isHidden ? (
-              <NavigationMenuItem key={nav.id} >
+              <NavigationMenuItem key={index} >
                 {nav.sub ? (
                   <>
                     <NavigationMenuTrigger >{nav.title}</NavigationMenuTrigger>
@@ -23,7 +23,7 @@ const NavMu = () => {
                         {nav.sub.map((s,i) => (
                           !s.isHidden ? (
                             <ListItem key={s.id} className='row-span-3' >
-                                <Link href={s.ref} className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md">
+                                <Link href={s.ref ?? "#"} className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md">
                                 {s.title}
                                 <p>{s.description}</p>
                                 </Link>
@@ -37,7 +37,7 @@ const NavMu = () => {
                 ):(
                   //No Submenu
                   <>
-                  <Link href={nav.ref} legacyBehavior passHref key={nav.id}>
+                  <Link href={nav.ref ?? "#"} legacyBehavior passHref key={nav.id}>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     {nav.title}
                   </NavigationMenuLink>

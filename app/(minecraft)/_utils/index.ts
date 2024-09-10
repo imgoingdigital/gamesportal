@@ -6,3 +6,7 @@
   const data =  fetch(`https://api.mcsrvstat.us/3/${address}:${port}`)
   return data;
 }
+export async function getServerStatusAsync  (address: string)  {
+  const data =  await fetch(`https://api.mcsrvstat.us/3/${address}`)
+  return data;
+}
