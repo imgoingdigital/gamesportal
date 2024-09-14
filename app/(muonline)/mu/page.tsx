@@ -1,10 +1,15 @@
+import News from '@/app/(launcher)/news/page'
 import { getServerSession } from 'next-auth'
 import { useSession } from 'next-auth/react'
 import React from 'react'
-
+import Install from './install'
 const page = () => {
   return (
-    <div className='main'>Mu Homepage</div>
+    <div>
+      <News></News>
+      <Install></Install>
+    </div>
+    
   )  
 }
 

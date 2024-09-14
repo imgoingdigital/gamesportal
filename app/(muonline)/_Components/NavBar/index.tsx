@@ -3,8 +3,8 @@ import React, { useState } from 'react'
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger, navigationMenuTriggerStyle } from '@/components/ui/navigation-menu'
 import { navLinksMu } from '@/constants/nav'
 import Link from 'next/link'
+import styles from "./index.module.scss"
 import { cn } from '@/lib/utils'
-// import "@/styles/mu.css"
 
 const NavMu = () => {
   const [active,setActive] = useState('Home')
@@ -18,7 +18,7 @@ const NavMu = () => {
                 {nav.sub ? (
                   <>
                     <NavigationMenuTrigger >{nav.title}</NavigationMenuTrigger>
-                    <NavigationMenuContent className="dropdown-content" >
+                    <NavigationMenuContent className="dropdown-content nav-item" >
                       <ul className=' gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]'>
                         {nav.sub.map((s,i) => (
                           !s.isHidden ? (

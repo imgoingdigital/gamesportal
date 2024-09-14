@@ -52,8 +52,9 @@ body {
   overflow:visible;
   background-color: #333;
   font-family: Arial;
-  opacity: 50%;
+
   font-weight: 600;
+	z-index: 9999;
 }
 
 .navbar  a, .navbar button{
@@ -63,5 +64,11 @@ body {
 
 .navbar .dropdown-content {
   font-size: medium;
+	background-color: #101010;
+	opacity: 50%;
+	z-index: 9999;
+}
+.navbar div, .nav-item {
+	background-color: black;
 }
 
