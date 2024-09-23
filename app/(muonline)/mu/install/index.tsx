@@ -5,19 +5,19 @@ const Install = () => {
   return (
     <div className={styles.main}>
       {installSteps.map((step, index) => (
-        <>
+        <div key={index}>
         <h3>Step {index+1}: {step.Title}</h3>
         <h4><span className='ml-10' >{step.Desc}</span></h4>
         <p></p>
         <span>Links:</span>
         {step.Links?.map((l,i) =>(
-          <p className='ml-2'>
+          <p className='ml-2' key={i}>
             <span>Link:</span><Link className='text-purple-800' href={l.Ref}>{l.Title}</Link>
           </p>
           
 
         ))}
-        </>
+        </div>
       ))}
     </div>
   )

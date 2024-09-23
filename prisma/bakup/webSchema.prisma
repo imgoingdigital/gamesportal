@@ -1,0 +1,17 @@
+generator webClient {
+  provider        = "prisma-client-js"
+  output          = "./generated/webClient"
+  previewFeatures = ["prismaSchemaFolder"]
+}
+
+datasource webDb {
+  provider = "mysql"
+  url      = env("WEB_DATABASE_URL")
+}
+
+model ClientUpdates{
+  id Int @id @default(autoincrement())
+  uploadDate DateTime @default(now())
+  version String
+  url String
+}
