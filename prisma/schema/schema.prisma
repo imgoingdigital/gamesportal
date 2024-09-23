@@ -10,11 +10,12 @@ datasource db {
 
 /// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
 model web_muclients {
-  id         Int       @id @default(autoincrement())
-  uploadDate DateTime? @default(now()) @db.DateTime(0)
-  game       String    @db.VarChar(45)
-  version    String    @db.VarChar(45)
-  url        String    @db.VarChar(45)
+  id           Int       @id @default(autoincrement())
+  uploadDate   DateTime? @default(now()) @db.DateTime(0)
+  game         String    @db.VarChar(45)
+  version      String?   @db.VarChar(45)
+  linkInternal String?   @db.VarChar(255)
+  linkExternal Json?
 }
 
 model account_data {
