@@ -20,7 +20,7 @@ const globalForPrisma = globalThis as unknown as {
 const WebDb = globalForPrisma.prisma ?? prismaWebClientSingleton();
 const MuDb = globalForPrisma.mugame ?? prismaMuClientSingleton();
 
-// export default WebDb;
+export default MuDb;
 export { MuDb, WebDb}
 
 
