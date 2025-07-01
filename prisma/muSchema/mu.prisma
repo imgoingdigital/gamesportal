@@ -1,0 +1,9 @@
+generator gameClient {
+  provider        = "prisma-client-js"
+  previewFeatures = ["prismaSchemaFolder"]
+}
+
+datasource muDb {
+  provider = "mysql"
+  url      = env("GAME_DATABASE_URL")
+}
