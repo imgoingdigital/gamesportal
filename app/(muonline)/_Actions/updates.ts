@@ -2,17 +2,25 @@
 
 import prismaClient from "@/prismaClient"
 
+class v{
+  id: string
+  version: string
+  game: string
 
+}
 const getVersion = async(version: string) => {
   
   if(version == "latest")
   {
+
     const clUpdate = await prismaClient.web_muclients.findFirst({
       orderBy:  {
         uploadDate: 'desc'
       }
-    })  
-    return JSON.stringify(clUpdate)
+    }) 
+
+    return clUpdate
+
   } else
   {
     const clUpdate = await prismaClient.web_muclients.findFirst({
@@ -20,7 +28,7 @@ const getVersion = async(version: string) => {
         version: version
       }
     })
-    return JSON.stringify(clUpdate);
+    return clUpdate;
   }
 }
 

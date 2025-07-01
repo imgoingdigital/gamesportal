@@ -1,21 +1,30 @@
 import { PrismaClient as GameClient} from "@prisma/client";
+import { PrismaClient as WebClient} from "@prisma/client";
 
 const prismaMuClientSingleton = () => {
   return new GameClient();
 };
-
-
+const prismaWebClientSingleton = () => {
+  return new WebClient();
+};
 
 
 type MuPrismaClientSingleton = ReturnType<typeof prismaMuClientSingleton>;
+type WebPrismaClientSingleton = ReturnType<typeof prismaWebClientSingleton>;
 
 
 const globalForPrisma = globalThis as unknown as {
-  prisma: MuPrismaClientSingleton | undefined;
+  prisma: WebPrismaClientSingleton | undefined;
+  mugame: MuPrismaClientSingleton | undefined;
 };
+const WebDb = globalForPrisma.prisma ?? prismaWebClientSingleton();
+const MuDb = globalForPrisma.mugame ?? prismaMuClientSingleton();
 
-const MuDb = globalForPrisma.prisma ?? prismaMuClientSingleton();
 export default MuDb;
+export { MuDb, WebDb}
+
+
 
 if (process.env.NODE_ENV !== "production")
-  globalForPrisma.prisma = MuDb;
+  globalForPrisma.prisma = WebDb;
+  globalForPrisma.mugame = MuDb
